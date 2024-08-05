@@ -1,6 +1,7 @@
+require("dotenv").cofnig();
 const { Bot, Api } = require("grammy");
 
-const bot = new Bot("6879565510:AAEUZ0K-7cvb9FCBinKQa8H6gGLvd6woNzo");
+const bot = new Bot(process.env.TELEGRAM_API);
 
 bot.command("start", (ctx) => ctx.reply("Welcome! Up and running."));
 
